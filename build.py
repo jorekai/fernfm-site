@@ -4,8 +4,8 @@ import pathlib
 ROOT = pathlib.Path(__file__).parent
 EMAIL = "info@fernfm.com"
 OWNER = "Nils Jorek"
-ADDRESS_DE = "[Anschrift folgt]"
-ADDRESS_EN = ADDRESS_DE
+ADDRESS_DE = "Am Holzweg 2<br>65843 Sulzbach (Taunus)<br>Deutschland"
+ADDRESS_EN = "Am Holzweg 2<br>65843 Sulzbach (Taunus)<br>Germany"
 UPDATED = {"de": "20. November 2026", "en": "November 20, 2026"}
 APP_URL = "https://apps.apple.com/app/id6836852211"
 
