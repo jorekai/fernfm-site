@@ -119,7 +119,7 @@ PAGES[("de", "privacy.html")] = ("Datenschutz: fernFM", "Datenschutzerklärung f
 <li><strong>Radiosender</strong>: Der Audiostream und die Songtitel kommen direkt vom Server des jeweiligen Senders. Senderlogos werden von der dort angegebenen Adresse geladen.</li>
 <li><strong>Apple iTunes-Suche</strong>: Zu erkannten Songs werden Künstler und Titel an Apple gesendet, um Cover, eine Hörprobe und einen Verweis auf Apple Music zu finden.</li>
 <li><strong>Apple (Hörproben)</strong>: Spielst du eine Hörprobe ab, lädt dein Gerät den 30-Sekunden-Ausschnitt direkt von Apples Servern.</li>
-<li><strong>GitHub Pages</strong> (GitHub Inc., USA): Beim Start und danach höchstens alle sechs Stunden lädt die App unsere Sperrliste (blocklist.json) von dieser Website. Sie enthält nur die IDs gemeldeter Sender; übermittelt wird nichts außer der technisch nötigen Anfrage.</li>
+<li><strong>GitHub Pages</strong> (GitHub Inc., USA): Beim Start und danach alle sechs Stunden lädt die App unsere Sperrliste (blocklist.json) von dieser Website. Sie enthält die IDs oder Server-Adressen gesperrter Sender, die Art der Beschwerde und das Datum, aber keine Angaben über Meldende oder Nutzer. Von deinem Gerät wird nichts außer der technisch nötigen Anfrage übermittelt.</li>
 </ul>
 
 <h2>4. Sender in deiner Nähe (Standort)</h2>
@@ -170,7 +170,7 @@ PAGES[("en", "privacy.html")] = ("Privacy: fernFM", "Privacy policy for the fern
 <li><strong>Radio stations</strong>: the audio stream and song titles come straight from the station's server. Station logos load from the address the station provides.</li>
 <li><strong>Apple iTunes Search</strong>: for recognized songs, artist and title are sent to Apple to find artwork, a preview and a link to Apple Music.</li>
 <li><strong>Apple (previews)</strong>: when you play a preview, your device loads the 30-second clip straight from Apple's servers.</li>
-<li><strong>GitHub Pages</strong> (GitHub Inc., USA): At launch and then at most every six hours, the app loads our blocklist (blocklist.json) from this website. It only contains the IDs of reported stations; nothing is sent beyond the technically necessary request.</li>
+<li><strong>GitHub Pages</strong> (GitHub Inc., USA): At launch and then every six hours, the app loads our blocklist (blocklist.json) from this website. It contains the IDs or server addresses of blocked stations, the type of complaint and the date, but nothing about reporters or users. Your device sends nothing beyond the technically necessary request.</li>
 </ul>
 
 <h2>4. Stations near you (location)</h2>
@@ -227,7 +227,7 @@ PAGES[("de", "rights.html")] = ("Sender melden: fernFM", "Rechteinhaber und Besc
 <p class="lead">fernFM sendet keine eigenen Inhalte. Die App zeigt Sender aus der offenen Datenbank Radio-Browser und spielt deren Streams direkt vom Server des Senders ab. Es gibt keine von uns ausgewählten oder hervorgehobenen Sender: Listen wie „Beliebt“ entstehen automatisch aus den Abrufzahlen der Datenbank.</p>
 
 <h2>Was wir tun</h2>
-<p>Verletzt ein Sender deine Rechte (etwa Urheber- oder Markenrechte) oder verbreitet er rechtswidrige Inhalte, nehmen wir ihn auf unsere zentrale Sperrliste. Gesperrte Sender verschwinden bei allen Nutzern aus Suche, Listen, Favoriten, Verlauf und Playlists und lassen sich nicht mehr abspielen. Die App lädt die Liste beim Start und danach mindestens alle sechs Stunden.</p>
+<p>Verletzt ein Sender deine Rechte (etwa Urheber- oder Markenrechte) oder verbreitet er rechtswidrige Inhalte, nehmen wir ihn auf unsere zentrale Sperrliste. Gesperrte Sender verschwinden bei allen Nutzern aus Suche, Listen, Favoriten, Verlauf und Playlists und lassen sich nicht mehr abspielen. Die App lädt die Liste beim Start und danach alle sechs Stunden, solange sie läuft.</p>
 
 <h2>So meldest du einen Sender</h2>
 <p>In der App: Sender lange drücken oder im Player das Menü öffnen, dann „Rechte- oder Inhaltsproblem melden“. Oder per E-Mail an <a href="mailto:{EMAIL}?subject=fernFM%20Meldung">{EMAIL}</a> mit:</p>
@@ -255,7 +255,7 @@ PAGES[("en", "rights.html")] = ("Report a station: fernFM", "Rights holders and 
 <p class="lead">fernFM does not broadcast any content of its own. The app shows stations from the open Radio-Browser database and plays their streams directly from the station's server. We do not pick or feature any stations: lists like "Popular" are generated automatically from the database's play counts.</p>
 
 <h2>What we do</h2>
-<p>If a station infringes your rights (for example copyright or trademark) or distributes illegal content, we add it to our central blocklist. Blocked stations disappear for all users from search, lists, favorites, history and playlists, and can no longer be played. The app loads the list at launch and then at least every six hours.</p>
+<p>If a station infringes your rights (for example copyright or trademark) or distributes illegal content, we add it to our central blocklist. Blocked stations disappear for all users from search, lists, favorites, history and playlists, and can no longer be played. The app loads the list at launch and then every six hours while it is running.</p>
 
 <h2>How to report a station</h2>
 <p>In the app: long-press a station or open the menu in the player, then "Report a rights or content issue". Or email <a href="mailto:{EMAIL}?subject=fernFM%20report">{EMAIL}</a> with:</p>
