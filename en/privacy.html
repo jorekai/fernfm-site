@@ -18,8 +18,8 @@
 </header>
 <p class="eyebrow">Privacy</p>
 <h1>Privacy policy</h1>
-<p class="updated">Last updated: November 20, 2026</p>
-<p class="lead">In short: fernFM has no server of its own, no account, no ads and no tracking. Your favorites, playlists and songs stay on your device and, if you use fernFM Plus, in your own iCloud account. We see none of it.</p>
+<p class="updated">Last updated: November 21, 2026</p>
+<p class="lead">In short: fernFM has no server of its own, no account, no ads of its own and no tracking. Your favorites, playlists and songs stay on your device and, if you use fernFM Plus, in your own iCloud account. We see none of it.</p>
 
 <h2>1. Controller</h2>
 <p>Nils Jorek<br>Am Holzweg 2<br>65843 Sulzbach (Taunus)<br>Germany<br>Email: <a href="mailto:info@fernfm.com">info@fernfm.com</a></p>
@@ -32,11 +32,13 @@
 <ul>
 <li><strong>Radio Browser</strong> (radio-browser.info): station lists, search and station details. Your search terms and filters are sent. When you play a station, its ID is reported so the database can count popular stations.</li>
 <li><strong>Radio stations</strong>: the audio stream and song titles come straight from the station's server. Station logos load from the address the station provides.</li>
-<li><strong>Apple iTunes Search</strong>: for recognized songs, artist and title are sent to Apple to find artwork and a link to Apple Music.</li>
+<li><strong>Apple iTunes Search</strong>: for recognized songs, artist and title are sent to Apple to find artwork, a preview and a link to Apple Music.</li>
+<li><strong>Apple (previews)</strong>: when you play a preview, your device loads the 30-second clip straight from Apple's servers.</li>
+<li><strong>GitHub Pages</strong> (GitHub Inc., USA): At launch and then at most every six hours, the app loads our blocklist (blocklist.json) from this website. It only contains the IDs of reported stations; nothing is sent beyond the technically necessary request.</li>
 </ul>
 
 <h2>4. Stations near you (location)</h2>
-<p>Only when you tap "Stations near me" and allow access does fernFM read an approximate location once. It is rounded to about one kilometer and sent to Radio Browser for this search only. fernFM does not store the location and does not use it in the background. The legal basis is your consent (Art. 6(1)(a) GDPR), which you can withdraw in iOS Settings at any time.</p>
+<p>Only when you tap "Stations near me" and allow access does fernFM read an approximate location once. It is rounded to about one kilometer and sent to Radio Browser for this search only. fernFM does not store the location and does not use it in the background. The legal basis is your consent (Art. 6(1)(a) GDPR), which you can withdraw in your device settings at any time.</p>
 
 <h2>5. Song recognition (ShazamKit)</h2>
 <p>When you start song recognition, fernFM creates an audio signature from about ten seconds of the current stream and sends it to Apple's Shazam service. The microphone is not used. Apple's privacy policy applies.</p>
@@ -44,14 +46,15 @@
 <h2>6. iCloud sync (fernFM Plus)</h2>
 <p>With fernFM Plus, favorites, playlists, saved songs and collections are stored in the iCloud key-value store of your own iCloud account. Apple processes this data as the provider of iCloud. We have no access to it.</p>
 
-<h2>7. Apple Music export</h2>
+<h2>7. Apple Music (export and sync)</h2>
 <p>When you export a collection as a playlist and allow access, fernFM uses MusicKit to create a playlist in your Apple Music library.</p>
+<p>If you turn on Apple Music sync with fernFM Plus, fernFM automatically adds newly saved songs to the playlist "fernFM" in your library, and optionally to one playlist per station. What is sent are the Apple Music IDs of these songs and the playlist names (for per-station playlists, the station name). You can turn sync off in Settings at any time and withdraw access in your device settings.</p>
 
 <h2>8. Purchases</h2>
-<p>fernFM Plus is bought through the App Store. Apple handles payment. The app verifies the purchase on the device through StoreKit. We receive no payment data.</p>
+<p>fernFM Plus is bought through the App Store, or through Google Play on Android devices. Apple or Google handles payment. The app verifies the purchase on the device through StoreKit or Google Play Billing. We receive no payment data.</p>
 
 <h2>9. Error reports</h2>
-<p>Error reports stay on the device. They contain the app and iOS version and the error, but no stations or songs. A report is only sent if you explicitly share it, through the channel you choose.</p>
+<p>Error reports stay on the device. They contain the app and system version and the error, but no stations or songs. A report is only sent if you explicitly share it, through the channel you choose.</p>
 
 <h2>10. No analytics, no ads</h2>
 <p>fernFM contains no analytics, tracking or advertising SDKs and builds no user profiles.</p>
@@ -61,7 +64,7 @@
 
 <h2>12. Your rights</h2>
 <p>Under the GDPR you have the right of access, rectification, erasure, restriction of processing, data portability and objection, and the right to lodge a complaint with a supervisory authority. Since we store no personal data about you, most requests can be handled directly in the app. Feel free to write to <a href="mailto:info@fernfm.com">info@fernfm.com</a>.</p>
-<footer><a href="imprint.html">Legal notice</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><span>© 2026 Nils Jorek</span></footer>
+<footer><a href="imprint.html">Legal notice</a><a href="rights.html">Report a station</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><span>© 2026 Nils Jorek</span></footer>
 </main>
 </body>
 </html>

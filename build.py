@@ -6,19 +6,19 @@ EMAIL = "info@fernfm.com"
 OWNER = "Nils Jorek"
 ADDRESS_DE = "Am Holzweg 2<br>65843 Sulzbach (Taunus)<br>Deutschland"
 ADDRESS_EN = "Am Holzweg 2<br>65843 Sulzbach (Taunus)<br>Germany"
-UPDATED = {"de": "20. November 2026", "en": "November 20, 2026"}
+UPDATED = {"de": "21. November 2026", "en": "November 21, 2026"}
 APP_URL = "https://apps.apple.com/app/id6836852211"
 
 T = {
     "de": {
         "nav": [("index.html", "Start"), ("support.html", "Support"), ("privacy.html", "Datenschutz")],
-        "foot": [("imprint.html", "Impressum"), ("privacy.html", "Datenschutz"), ("support.html", "Support")],
+        "foot": [("imprint.html", "Impressum"), ("rights.html", "Sender melden"), ("privacy.html", "Datenschutz"), ("support.html", "Support")],
         "other": ("en", "English"),
         "updated": "Stand",
     },
     "en": {
         "nav": [("index.html", "Home"), ("support.html", "Support"), ("privacy.html", "Privacy")],
-        "foot": [("imprint.html", "Legal notice"), ("privacy.html", "Privacy"), ("support.html", "Support")],
+        "foot": [("imprint.html", "Legal notice"), ("rights.html", "Report a station"), ("privacy.html", "Privacy"), ("support.html", "Support")],
         "other": ("de", "Deutsch"),
         "updated": "Last updated",
     },
@@ -26,10 +26,10 @@ T = {
 
 PAGES = {}
 
-PAGES[("de", "index.html")] = ("fernFM: Radio aus aller Welt", "Radio aus aller Welt für das iPhone. Ohne Konto, ohne Werbung.", f"""
+PAGES[("de", "index.html")] = ("fernFM: Radio aus aller Welt", "Radio aus aller Welt für das iPhone. Ohne Konto, ohne Tracking.", f"""
 <p class="eyebrow">Radio für das iPhone</p>
 <h1>Radio aus aller Welt. Ruhig gemacht.</h1>
-<p class="lead">fernFM spielt Zehntausende Sender aus aller Welt, merkt sich die Songs, die du gehört hast, und kommt ohne Konto, ohne Werbung und ohne Tracking aus.</p>
+<p class="lead">fernFM spielt Zehntausende Sender aus aller Welt, merkt sich die Songs, die du gehört hast, und kommt ohne Konto, ohne eigene Werbung und ohne Tracking aus. Was ein Sender selbst ausstrahlt, auch seine Werbung, kommt unverändert von ihm.</p>
 <p><a href="{APP_URL}">Im App Store laden</a></p>
 <div class="card"><h2>Kostenlos</h2><ul>
 <li>Sender suchen nach Genre, Land und Sprache</li>
@@ -45,10 +45,10 @@ PAGES[("de", "index.html")] = ("fernFM: Radio aus aller Welt", "Radio aus aller 
 <p>Kein Abo. Mit Familienfreigabe für die ganze Familie.</p></div>
 """)
 
-PAGES[("en", "index.html")] = ("fernFM: Radio from around the world", "Radio from around the world for iPhone. No account, no ads.", f"""
+PAGES[("en", "index.html")] = ("fernFM: Radio from around the world", "Radio from around the world for iPhone. No account, no tracking.", f"""
 <p class="eyebrow">Radio for iPhone</p>
 <h1>Radio from around the world. Made calm.</h1>
-<p class="lead">fernFM plays tens of thousands of stations from around the world, remembers the songs you heard and works without an account, ads or tracking.</p>
+<p class="lead">fernFM plays tens of thousands of stations from around the world, remembers the songs you heard and works without an account, ads of its own or tracking. Whatever a station broadcasts, its ads included, comes unchanged from the station.</p>
 <p><a href="{APP_URL}">Download on the App Store</a></p>
 <div class="card"><h2>Free</h2><ul>
 <li>Search stations by genre, country and language</li>
@@ -104,7 +104,7 @@ PAGES[("de", "privacy.html")] = ("Datenschutz: fernFM", "Datenschutzerklärung f
 <p class="eyebrow">Datenschutz</p>
 <h1>Datenschutzerklärung</h1>
 <p class="updated">{T['de']['updated']}: {UPDATED['de']}</p>
-<p class="lead">Kurz gesagt: fernFM hat keinen eigenen Server, kein Konto, keine Werbung und kein Tracking. Deine Favoriten, Playlists und Songs liegen auf deinem Gerät und, wenn du fernFM Plus nutzt, in deinem eigenen iCloud-Account. Wir sehen davon nichts.</p>
+<p class="lead">Kurz gesagt: fernFM hat keinen eigenen Server, kein Konto, keine eigene Werbung und kein Tracking. Deine Favoriten, Playlists und Songs liegen auf deinem Gerät und, wenn du fernFM Plus nutzt, in deinem eigenen iCloud-Account. Wir sehen davon nichts.</p>
 
 <h2>1. Verantwortlicher</h2>
 <p>{OWNER}<br>{ADDRESS_DE}<br>E-Mail: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
@@ -117,11 +117,13 @@ PAGES[("de", "privacy.html")] = ("Datenschutz: fernFM", "Datenschutzerklärung f
 <ul>
 <li><strong>Radio-Browser</strong> (radio-browser.info): Senderlisten, Suche und Senderdetails. Übermittelt werden deine Suchbegriffe und Filter. Beim Abspielen eines Senders wird die Sender-ID gemeldet, damit die Datenbank beliebte Sender zählen kann.</li>
 <li><strong>Radiosender</strong>: Der Audiostream und die Songtitel kommen direkt vom Server des jeweiligen Senders. Senderlogos werden von der dort angegebenen Adresse geladen.</li>
-<li><strong>Apple iTunes-Suche</strong>: Zu erkannten Songs werden Künstler und Titel an Apple gesendet, um Cover und einen Verweis auf Apple Music zu finden.</li>
+<li><strong>Apple iTunes-Suche</strong>: Zu erkannten Songs werden Künstler und Titel an Apple gesendet, um Cover, eine Hörprobe und einen Verweis auf Apple Music zu finden.</li>
+<li><strong>Apple (Hörproben)</strong>: Spielst du eine Hörprobe ab, lädt dein Gerät den 30-Sekunden-Ausschnitt direkt von Apples Servern.</li>
+<li><strong>GitHub Pages</strong> (GitHub Inc., USA): Beim Start und danach höchstens alle sechs Stunden lädt die App unsere Sperrliste (blocklist.json) von dieser Website. Sie enthält nur die IDs gemeldeter Sender; übermittelt wird nichts außer der technisch nötigen Anfrage.</li>
 </ul>
 
 <h2>4. Sender in deiner Nähe (Standort)</h2>
-<p>Nur wenn du „Sender in meiner Nähe“ antippst und den Zugriff erlaubst, liest fernFM einmalig einen ungefähren Standort. Er wird auf etwa einen Kilometer gerundet und nur für diese Suche an Radio-Browser gesendet. fernFM speichert den Standort nicht und nutzt ihn nicht im Hintergrund. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du in den iOS-Einstellungen jederzeit widerrufen kannst.</p>
+<p>Nur wenn du „Sender in meiner Nähe“ antippst und den Zugriff erlaubst, liest fernFM einmalig einen ungefähren Standort. Er wird auf etwa einen Kilometer gerundet und nur für diese Suche an Radio-Browser gesendet. fernFM speichert den Standort nicht und nutzt ihn nicht im Hintergrund. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du in den Systemeinstellungen deines Geräts jederzeit widerrufen kannst.</p>
 
 <h2>5. Song-Erkennung (ShazamKit)</h2>
 <p>Wenn du die Song-Erkennung startest, erzeugt fernFM aus etwa zehn Sekunden des laufenden Streams eine Audio-Signatur und sendet sie an Apples Shazam-Dienst. Das Mikrofon wird nicht verwendet. Es gilt die Datenschutzerklärung von Apple.</p>
@@ -129,14 +131,15 @@ PAGES[("de", "privacy.html")] = ("Datenschutz: fernFM", "Datenschutzerklärung f
 <h2>6. iCloud-Abgleich (fernFM Plus)</h2>
 <p>Mit fernFM Plus werden Favoriten, Playlists, gespeicherte Songs und Sammlungen über den iCloud-Schlüssel-Wert-Speicher in deinem eigenen iCloud-Account abgelegt. Apple verarbeitet diese Daten als Anbieter von iCloud. Wir haben keinen Zugriff darauf.</p>
 
-<h2>7. Apple Music Export</h2>
+<h2>7. Apple Music (Export und Abgleich)</h2>
 <p>Wenn du eine Sammlung als Playlist exportierst und den Zugriff erlaubst, legt fernFM über MusicKit eine Playlist in deiner Apple-Music-Mediathek an.</p>
+<p>Schaltest du mit fernFM Plus den Apple-Music-Abgleich ein, fügt fernFM neu gemerkte Songs automatisch der Playlist „fernFM“ in deiner Mediathek hinzu, auf Wunsch zusätzlich einer Playlist pro Sender. Übertragen werden die Apple-Music-IDs dieser Songs und die Namen der Playlists (bei Playlists pro Sender also der Sendername). Den Abgleich kannst du in den Einstellungen jederzeit ausschalten und den Zugriff in den Systemeinstellungen widerrufen.</p>
 
 <h2>8. Käufe</h2>
-<p>fernFM Plus wird über den App Store gekauft. Zahlung und Abwicklung übernimmt Apple. Die App prüft den Kauf auf dem Gerät über StoreKit. Wir erhalten keine Zahlungsdaten.</p>
+<p>fernFM Plus wird über den App Store gekauft, auf Android-Geräten über Google Play. Zahlung und Abwicklung übernimmt Apple beziehungsweise Google. Die App prüft den Kauf auf dem Gerät über StoreKit beziehungsweise Google Play Billing. Wir erhalten keine Zahlungsdaten.</p>
 
 <h2>9. Fehlerberichte</h2>
-<p>Fehlerberichte bleiben auf dem Gerät. Sie enthalten App- und iOS-Version und den Fehler, aber keine Sender oder Songs. Nur wenn du einen Bericht ausdrücklich teilst, wird er über den von dir gewählten Weg versendet.</p>
+<p>Fehlerberichte bleiben auf dem Gerät. Sie enthalten App- und Systemversion und den Fehler, aber keine Sender oder Songs. Nur wenn du einen Bericht ausdrücklich teilst, wird er über den von dir gewählten Weg versendet.</p>
 
 <h2>10. Keine Analyse, keine Werbung</h2>
 <p>fernFM enthält keine Analyse-, Tracking- oder Werbe-SDKs und erstellt keine Nutzerprofile.</p>
@@ -152,7 +155,7 @@ PAGES[("en", "privacy.html")] = ("Privacy: fernFM", "Privacy policy for the fern
 <p class="eyebrow">Privacy</p>
 <h1>Privacy policy</h1>
 <p class="updated">{T['en']['updated']}: {UPDATED['en']}</p>
-<p class="lead">In short: fernFM has no server of its own, no account, no ads and no tracking. Your favorites, playlists and songs stay on your device and, if you use fernFM Plus, in your own iCloud account. We see none of it.</p>
+<p class="lead">In short: fernFM has no server of its own, no account, no ads of its own and no tracking. Your favorites, playlists and songs stay on your device and, if you use fernFM Plus, in your own iCloud account. We see none of it.</p>
 
 <h2>1. Controller</h2>
 <p>{OWNER}<br>{ADDRESS_EN}<br>Email: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
@@ -165,11 +168,13 @@ PAGES[("en", "privacy.html")] = ("Privacy: fernFM", "Privacy policy for the fern
 <ul>
 <li><strong>Radio Browser</strong> (radio-browser.info): station lists, search and station details. Your search terms and filters are sent. When you play a station, its ID is reported so the database can count popular stations.</li>
 <li><strong>Radio stations</strong>: the audio stream and song titles come straight from the station's server. Station logos load from the address the station provides.</li>
-<li><strong>Apple iTunes Search</strong>: for recognized songs, artist and title are sent to Apple to find artwork and a link to Apple Music.</li>
+<li><strong>Apple iTunes Search</strong>: for recognized songs, artist and title are sent to Apple to find artwork, a preview and a link to Apple Music.</li>
+<li><strong>Apple (previews)</strong>: when you play a preview, your device loads the 30-second clip straight from Apple's servers.</li>
+<li><strong>GitHub Pages</strong> (GitHub Inc., USA): At launch and then at most every six hours, the app loads our blocklist (blocklist.json) from this website. It only contains the IDs of reported stations; nothing is sent beyond the technically necessary request.</li>
 </ul>
 
 <h2>4. Stations near you (location)</h2>
-<p>Only when you tap "Stations near me" and allow access does fernFM read an approximate location once. It is rounded to about one kilometer and sent to Radio Browser for this search only. fernFM does not store the location and does not use it in the background. The legal basis is your consent (Art. 6(1)(a) GDPR), which you can withdraw in iOS Settings at any time.</p>
+<p>Only when you tap "Stations near me" and allow access does fernFM read an approximate location once. It is rounded to about one kilometer and sent to Radio Browser for this search only. fernFM does not store the location and does not use it in the background. The legal basis is your consent (Art. 6(1)(a) GDPR), which you can withdraw in your device settings at any time.</p>
 
 <h2>5. Song recognition (ShazamKit)</h2>
 <p>When you start song recognition, fernFM creates an audio signature from about ten seconds of the current stream and sends it to Apple's Shazam service. The microphone is not used. Apple's privacy policy applies.</p>
@@ -177,14 +182,15 @@ PAGES[("en", "privacy.html")] = ("Privacy: fernFM", "Privacy policy for the fern
 <h2>6. iCloud sync (fernFM Plus)</h2>
 <p>With fernFM Plus, favorites, playlists, saved songs and collections are stored in the iCloud key-value store of your own iCloud account. Apple processes this data as the provider of iCloud. We have no access to it.</p>
 
-<h2>7. Apple Music export</h2>
+<h2>7. Apple Music (export and sync)</h2>
 <p>When you export a collection as a playlist and allow access, fernFM uses MusicKit to create a playlist in your Apple Music library.</p>
+<p>If you turn on Apple Music sync with fernFM Plus, fernFM automatically adds newly saved songs to the playlist "fernFM" in your library, and optionally to one playlist per station. What is sent are the Apple Music IDs of these songs and the playlist names (for per-station playlists, the station name). You can turn sync off in Settings at any time and withdraw access in your device settings.</p>
 
 <h2>8. Purchases</h2>
-<p>fernFM Plus is bought through the App Store. Apple handles payment. The app verifies the purchase on the device through StoreKit. We receive no payment data.</p>
+<p>fernFM Plus is bought through the App Store, or through Google Play on Android devices. Apple or Google handles payment. The app verifies the purchase on the device through StoreKit or Google Play Billing. We receive no payment data.</p>
 
 <h2>9. Error reports</h2>
-<p>Error reports stay on the device. They contain the app and iOS version and the error, but no stations or songs. A report is only sent if you explicitly share it, through the channel you choose.</p>
+<p>Error reports stay on the device. They contain the app and system version and the error, but no stations or songs. A report is only sent if you explicitly share it, through the channel you choose.</p>
 
 <h2>10. No analytics, no ads</h2>
 <p>fernFM contains no analytics, tracking or advertising SDKs and builds no user profiles.</p>
@@ -211,6 +217,63 @@ PAGES[("en", "imprint.html")] = ("Legal notice: fernFM", "Legal notice for fernF
 <p>Information according to § 5 DDG (Germany)</p>
 <p>{OWNER}<br>{ADDRESS_EN}</p>
 <p>Email: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+""")
+
+
+PAGES[("de", "rights.html")] = ("Sender melden: fernFM", "Rechteinhaber und Beschwerden: so entfernt fernFM einen Sender.", f"""
+<p class="eyebrow">Sender melden</p>
+<h1>Rechteinhaber und Beschwerden</h1>
+<p class="updated">{T['de']['updated']}: {UPDATED['de']}</p>
+<p class="lead">fernFM sendet keine eigenen Inhalte. Die App zeigt Sender aus der offenen Datenbank Radio-Browser und spielt deren Streams direkt vom Server des Senders ab. Es gibt keine von uns ausgewählten oder hervorgehobenen Sender: Listen wie „Beliebt“ entstehen automatisch aus den Abrufzahlen der Datenbank.</p>
+
+<h2>Was wir tun</h2>
+<p>Verletzt ein Sender deine Rechte (etwa Urheber- oder Markenrechte) oder verbreitet er rechtswidrige Inhalte, nehmen wir ihn auf unsere zentrale Sperrliste. Gesperrte Sender verschwinden bei allen Nutzern aus Suche, Listen, Favoriten, Verlauf und Playlists und lassen sich nicht mehr abspielen. Die App lädt die Liste beim Start und danach mindestens alle sechs Stunden.</p>
+
+<h2>So meldest du einen Sender</h2>
+<p>In der App: Sender lange drücken oder im Player das Menü öffnen, dann „Rechte- oder Inhaltsproblem melden“. Oder per E-Mail an <a href="mailto:{EMAIL}?subject=fernFM%20Meldung">{EMAIL}</a> mit:</p>
+<ul>
+<li>Name des Senders und, wenn möglich, die Stream-Adresse oder die Radio-Browser-ID</li>
+<li>welches Recht verletzt ist oder welcher Inhalt rechtswidrig ist, mit kurzer Begründung</li>
+<li>deinem Namen und, wenn du für einen Rechteinhaber handelst, für wen</li>
+<li>einer Erklärung, dass deine Angaben nach bestem Wissen richtig sind</li>
+</ul>
+
+<h2>Wie schnell</h2>
+<p>Wir bestätigen den Eingang in der Regel innerhalb von zwei Werktagen und prüfen jede Meldung. Ist der Hinweis berechtigt oder offensichtlich begründet, sperren wir den Sender unverzüglich; bei allen Nutzern wirkt die Sperre spätestens mit dem nächsten Laden der Liste. Wir teilen dir das Ergebnis mit.</p>
+
+<h2>Widerspruch</h2>
+<p>Betreibst du einen gesperrten Sender und hältst die Sperre für falsch, schreib uns mit Begründung an dieselbe Adresse. Wir prüfen den Widerspruch und heben die Sperre auf, wenn er berechtigt ist.</p>
+
+<h2>Fehler im Sendereintrag</h2>
+<p>Falscher Name, falsches Land oder ein toter Stream sind kein Rechtsproblem. Solche Einträge kannst du direkt bei <a href="https://www.radio-browser.info">radio-browser.info</a> korrigieren; in der App kannst du einen Sender außerdem für dich ausblenden.</p>
+""")
+
+PAGES[("en", "rights.html")] = ("Report a station: fernFM", "Rights holders and complaints: how fernFM removes a station.", f"""
+<p class="eyebrow">Report a station</p>
+<h1>Rights holders and complaints</h1>
+<p class="updated">{T['en']['updated']}: {UPDATED['en']}</p>
+<p class="lead">fernFM does not broadcast any content of its own. The app shows stations from the open Radio-Browser database and plays their streams directly from the station's server. We do not pick or feature any stations: lists like "Popular" are generated automatically from the database's play counts.</p>
+
+<h2>What we do</h2>
+<p>If a station infringes your rights (for example copyright or trademark) or distributes illegal content, we add it to our central blocklist. Blocked stations disappear for all users from search, lists, favorites, history and playlists, and can no longer be played. The app loads the list at launch and then at least every six hours.</p>
+
+<h2>How to report a station</h2>
+<p>In the app: long-press a station or open the menu in the player, then "Report a rights or content issue". Or email <a href="mailto:{EMAIL}?subject=fernFM%20report">{EMAIL}</a> with:</p>
+<ul>
+<li>the station's name and, if possible, the stream address or Radio-Browser ID</li>
+<li>which right is infringed or which content is illegal, with a short reason</li>
+<li>your name and, if you act for a rights holder, on whose behalf</li>
+<li>a statement that your information is accurate to the best of your knowledge</li>
+</ul>
+
+<h2>How fast</h2>
+<p>We usually confirm receipt within two business days and review every report. If the notice is valid or clearly justified, we block the station without delay; for all users the block takes effect at the latest when the app next loads the list. We will tell you the outcome.</p>
+
+<h2>Counter-notice</h2>
+<p>If you run a blocked station and believe the block is wrong, write to the same address with your reasons. We review it and lift the block if it is justified.</p>
+
+<h2>Errors in a station entry</h2>
+<p>A wrong name, wrong country or a dead stream is not a legal issue. You can correct such entries directly at <a href="https://www.radio-browser.info">radio-browser.info</a>; in the app you can also hide a station for yourself.</p>
 """)
 
 
